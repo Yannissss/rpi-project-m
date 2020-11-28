@@ -44,8 +44,9 @@ const getLANAddress = () => {
 
 const server = http.createServer(app);
 console.log("RPI Home Audio v0.1");
-server.listen(667, getLANAddress(), () => {
-  const addr = server.address();
-  console.log("# LAN:   http://" + getLANAddress() + ":" + addr.port);
-  console.log("# Local: http://127.0.0.1:" + addr.port);
-});
+server.listen(3000);
+// server.listen(667, getLANAddress(), () => {
+//   const addr = server.address();
+//   console.log("# LAN:   http://" + getLANAddress() + ":" + addr.port);
+//   console.log("# Local: http://127.0.0.1:" + addr.port);
+// });
