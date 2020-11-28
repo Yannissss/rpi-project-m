@@ -21,7 +21,7 @@ const app = (() => {
 
   /* View engine */
   app.set('view engine', 'ejs');
-  app.set('views', 'views');
+  app.set('views', 'src/views');
 
   return app;
 })();
@@ -31,6 +31,10 @@ const app = (() => {
 // Dev routes
 const DevRoutes = require("./routes/dev");
 app.use("/dev", DevRoutes);
+
+// Player routes
+const playerRoutes = require('./routes/player');
+app.use(playerRoutes);
 
 // Default fallback
 app.use((req, res) => {
