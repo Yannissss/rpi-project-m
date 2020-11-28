@@ -27,6 +27,12 @@ const app = (() => {
 })();
 
 /* Routing config */
+
+// Dev routes
+const DevRoutes = require("./routes/dev");
+app.use("/dev", DevRoutes);
+
+// Default fallback
 app.use((req, res) => {
   res.send("Salut Jason!");
 });
